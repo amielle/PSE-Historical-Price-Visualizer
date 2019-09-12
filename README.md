@@ -22,3 +22,8 @@ or
 ```
 npm start
 ```
+
+### Plans
+* Update dependencies to get rid of the [Minimatch security issue](https://nvd.nist.gov/vuln/detail/CVE-2016-10540)
+* Optimize code for faster runtime
+* Include public sentiment from news feedback
