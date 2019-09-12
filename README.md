@@ -1,6 +1,6 @@
 # PSE Historical Price Visualizer
 
-![alt text](https://raw.githubusercontent.com/amielle/PSE-Historical-Price-Visualizer/master/img/sample.png?token=AKJDPHWO2WCQ62NLVK4XJMK5PJFG6 "Sample image of site")
+![alt text](https://github.com/amielle/PSE-Historical-Price-Visualizer/blob/master/img/sample.png "Sample image of site")
 
 [A simple tool](https://pse-prices.herokuapp.com/) deployed on Heroku to display the closing stock price and trading volume data for Blue Chip companies in the Philippines (up to 09/10/19). Built with D3.js, Node.js, HTML, CSS, and plain JS.
 
