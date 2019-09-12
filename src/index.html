@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+	<head>
+	<meta charset="utf-8">
+	<title>Historical Price Visualizer | Philippine Blue Chip Companies</title>
+	<link rel=stylesheet href="style.css" type="text/css" media=screen>
+	<script src='http://d3js.org/d3.v3.min.js' charset="utf-8"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js' charset="utf-8"></script>
+	
+	<style type="text/css">
+		select { 
+			appearance: none; 
+			outline: 0; 
+			color: black;
+			background-color:#F2F3F4; 
+			cursor: pointer; 
+			padding: 7px;	
+			border-radius:2px;
+			font-size: 1em;
+			border: none;
+			margin: 5px;
+		} 
+		.button {
+			background-color: #ff6600;
+			border: none;
+			color: white;
+			padding: 7px 14px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1em;
+		}
+		.area {
+			stroke:#f5741d;
+			fill: #f0b994;
+		}
+		.chart__bars {
+			stroke: #f0b994;
+			fill: #f0b994;
+			stroke-width: 0.5%;
+
+		}
+		.line {
+			stroke:#ff6600;
+			stroke-width: 0.65;
+		}
+		.bar {
+			fill: none;
+			stroke:#ff6600;
+			stroke-width: 0.65;
+		}
+		.context {
+			fill: none;
+			stroke:#1C2833;
+			stroke-width: 0.5;
+		}
+
+		.grid-container {
+			display: inline-grid;
+			grid-template-columns: auto auto auto;
+			padding: 10px;
+		}
+	</style>
+	</head>
+
+	<body style="background-color:#F2F3F4; margin: 0;color: rgb(241, 241, 241); font-family: Arial, Helvetica, sans-serif;">
+	<div class="container" style="background-color:#1C2833 ">
+		<div  style="margin: 0; padding: 1% 10%;">
+		<h2 style="display: inline;">PSE Historical Price Visualizer</h2> <a href="https://github.com/amielle" style="text-decoration: none; color: rgb(192, 86, 0); font-size: 12px;">&copy; A.B.D.</a>
+		
+		
+		
+		
+		<p style="font-size:14px;color:#E5E7E9;">A simple tool to display the closing stock price and trading volume data for Blue Chip companies 
+			in the Philippines (up to 09/10/19). Built with D3.js, Node.js, HTML, CSS, and plain JS.</p>	
+		<label for="company" style="font-weight: 700;font-size: 1em;">Company</label>
+		<select id="company">
+				<option value="AC">Ayala Corporation</option>
+				<option value="AEV">Aboitiz Equity Ventures, Inc.</option>
+				<option value="AGI">Alliance Global Group, Inc.</option>
+				<option value="ALI">Ayala Land, Inc.</option>
+				<option value="AP">Aboitiz Power Corporation</option>
+				<option value="BDO">BDO Unibank, Inc.</option>
+				<option value="BPI">Bank of the Philippine Islands</option>
+				<option value="DMC">DMCI Holdings, Inc.</option>
+				<option value="FGEN">First Gen Corporation</option>
+				<option value="GLO">Globe Telecom, Inc.</option>
+
+				<option value="GTCAP">GT Capital Holdings, Inc.</option>
+				<option value="ICT">Int'l Container Terminal Services, Inc.</option>
+				<option value="JFC">Jollibee Foods Corporation</option>
+				<option value="JGS">JG Summit Holdings, Inc.</option>
+				<option value="LTG">LT Group, Inc.</option>
+				<option value="MBT">Metropolitan Bank and Trust Company</option>
+				<option value="MEG">Megaworld Corporation</option>
+				<option value="MER">Manila Electric Company</option>
+				<option value="MPI">Metro Pacific Investments Corporation</option>
+				<option value="PCOR">Petron Corporation</option>
+
+				<option value="PGOLD">Puregold Price Club, Inc.</option>
+				<option value="RLC">Robinson Land Corporation</option>
+				<option value="RRHI">Robinsons Retail Holdings, Inc.</option>
+				<option value="SCC">Semirara Mining and Power Corporation</option>
+				<option value="SECB">Security Bank Corporation</option>
+				<option value="SM">SM Investments Corporation	</option>
+				<option value="SMC">San Miguel Corporation</option>
+				<option value="SMPH">SM Prime Holdings, Inc.</option>
+				<option value="TEL">PLDT, Inc.</option>
+				<option value="URC">Universal Robina Corporation</option>
+
+		</select>
+		<input type="button" class="button" onclick="draw_chart()" value="Visualize" />
+		</div>
+	</div>
+	<br/><br/>
+
+	<div style="margin: 10px 0 -10px 18%; color: #1C2833;text-align: left; font-size: 12px;">
+		&#10554; Specify the time period here
+	</div>
+
+	&#8604;
+	<div id="stockchart"></div>
+	<div style="margin: 0 0 0 12%; color: #1C2833;text-align: left; font-size: 12px;">
+		&#8604; Click and drag within the graph to do a variable zoom in
+	</div>
+
+
+	<div style="margin: -20px 12% 0 0; color: #1C2833;text-align: right; font-size: 12px;">
+		Move the bar to see data from other dates &#10548;
+	</div>
+
+	<script src="script.js"></script>
+	</body>
+</html>

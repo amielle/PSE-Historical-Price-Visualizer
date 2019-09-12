@@ -1,0 +1,25 @@
+{
+  "name": "pse-historical-price-visualizer",
+  "description": "Tool to display the closing stock price and trading volume data for Blue Chip companies in the Philippines using D3.js",
+  "version": "0.0.1",
+  "author": "A.B.D.",
+  "license": "MIT Expat",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "d3.js",
+    "visualization"
+  ],
+  "d3.chart": {
+    "version": "0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "stylus -w src/style.styl src/style.css"
+  },
+  "dependencies": {
+    "stylus": "^0.49.3"
+  }
+}
