@@ -63,12 +63,12 @@
 	</style>
 	</head>
 
-	<body style="background-color:#F2F3F4; margin: 0;color: rgb(241, 241, 241); font-family: Arial, Helvetica, sans-serif;">
+	<body style="background-color:#F2F3F4; margin: 0;color: #1C2833; font-family: Arial, Helvetica, sans-serif;">
 	<div class="container" style="background-color:#1C2833 ">
-		<div  style="margin: 0; padding: 1% 10%;">
+		<div  style="margin: 0; padding: 1% 10%;color:#E5E7E9;"">
 		<h2 style="display: inline;">PSE Historical Price Visualizer</h2> <a href="https://github.com/amielle" style="text-decoration: none; color: rgb(192, 86, 0); font-size: 12px;">&copy; A.B.D.</a>
 		
-		<p style="font-size:14px;color:#E5E7E9;">A simple tool to display the closing stock price and trading volume data for Blue Chip companies 
+		<p style="font-size:14px;">A simple tool to display the closing stock price and trading volume data for Blue Chip companies 
 			in the Philippines (up to 09/10/19). Built with D3.js, Node.js, HTML, CSS, and plain JS.</p>	
 		<label for="company" style="font-weight: 700;font-size: 1em;">Company</label>
 		<select id="company">
@@ -111,17 +111,33 @@
 	</div>
 	<br/><br/>
 
-	<div style="margin: 10px 0 10px 18%; color: #1C2833;text-align: left; font-size: 12px;">
+	<div style="margin: 10px 0 10px 18%; text-align: left; font-size: 12px;">
 		&#10554; Specify the time period here
 	</div>
 
-	<div id="stockchart"></div>
-	<div style="margin: 0 0 0 12%; color: #1C2833;text-align: left; font-size: 12px;">
+	<div id="stockchart" style="background-color: #F2F3F4;
+	display: block; z-index: 5; position: relative;"> </div>
+
+	<center><h1 style="width:40%; 
+		height:200px; 
+		position: fixed;
+		top: 50%; 
+		left: 50%; 
+		margin-top: -100px; 
+		margin-left: -20%; 
+		z-index: 3;display: block;
+		font-weight: 300;
+		">Please wait for the graph to load. Thanks!</h1>
+	</center>
+	
+
+
+	<div style="margin: 0 0 0 12%; text-align: left; font-size: 12px;">
 		&#8604; Click and drag within the graph to do a variable zoom in
 	</div>
 
 
-	<div style="margin: -20px 12% 0 0; color: #1C2833;text-align: right; font-size: 12px;">
+	<div style="margin: -20px 12% 0 0; text-align: right; font-size: 12px;">
 		Move the bar to see data from other dates &#10548;
 	</div>
 
